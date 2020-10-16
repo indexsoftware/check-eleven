@@ -4,7 +4,7 @@
  * @param numberToParse Input number
  * @returns {Array<number>}
  */
-export function arrayFromNumber(numberToParse: number) {
+export function arrayFromNumber(numberToParse: number): Array<number> {
   // Create a string for the numberToParse argument
   const numberString = numberToParse.toString();
 
@@ -21,7 +21,7 @@ export function arrayFromNumber(numberToParse: number) {
  * @param {number} personNumber
  * @returns {boolean} Is the number valid
  */
-export function check(personNumber: number) {
+export function check(personNumber: number): boolean {
   // Check if the number is between 9999999 and 999999999
   if (personNumber <= 9999999 || personNumber > 999999999) {
     return false;
