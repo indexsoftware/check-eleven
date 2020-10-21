@@ -1,6 +1,6 @@
 {
   "name": "@indexsoftware/check-eleven",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Checks if a Dutch government issued service number is valid",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
