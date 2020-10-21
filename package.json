@@ -2,13 +2,12 @@
   "name": "@indexsoftware/check-eleven",
   "version": "1.0.1",
   "description": "Checks if a Dutch government issued service number is valid",
-  "main": "dist/index.js",
-  "module": "dist/module/index.js",
-  "browser": "dist/browser/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
-    "build": "rollup -c && tsc"
+    "build": "rm -rf dist && rollup -c && tsc --emitDeclarationOnly"
   },
   "homepage": "https://github.com/indexsoftware/check-eleven",
   "repository": {
@@ -38,6 +37,10 @@
   "author": "Index Software B.V.",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-typescript": "^7.12.1",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-node-resolve": "^9.0.0",
     "@types/jest": "^26.0.14",
     "@typescript-eslint/eslint-plugin": "^4.4.1",
     "@typescript-eslint/parser": "^4.4.1",
@@ -45,9 +48,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.5.3",
-    "rollup": "^2.31.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.27.3",
+    "rollup": "^2.32.1",
     "ts-jest": "^26.4.1",
     "typescript": "^4.0.3"
   }
