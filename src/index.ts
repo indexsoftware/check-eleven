@@ -5,6 +5,12 @@
  * @returns {Array<number>}
  */
 export function arrayFromNumber (numberToParse: number): Array<number> {
+  // Check if we have a number
+  if (!numberToParse) {
+    // Return empty array
+    return [];
+  }
+
   // Create a string for the numberToParse argument
   const numberString = numberToParse.toString();
 

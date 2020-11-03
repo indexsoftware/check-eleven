@@ -7,4 +7,11 @@ describe('arrayFromNumber', () => {
     // Evaluate function result
     expect(result).toStrictEqual([1, 2, 3, 4, 5, 6]);
   });
+
+  test('Pass null, expect empty array', () => {
+    // Get function result
+    const result = arrayFromNumber(null);
+    // Evaluate function result
+    expect(result).toStrictEqual([]);
+  });
 });
